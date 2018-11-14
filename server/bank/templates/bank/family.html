@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>{{ family.surname }}</title>
+    </head>
+
+    <body>
+
+    <h2>{{ family.surname }}</h2>
+
+    <i>Bank: {{ family.bank }}</i>
+    {% for member in family.members.all %}
+        <p><a href = "../member/{{member.id}}">{{member}}</a></p>
+    {% endfor %}
+
+    </body>
+</html>

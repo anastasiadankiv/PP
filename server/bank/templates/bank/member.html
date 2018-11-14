@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <link href='//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+
+
+        <title>{{member.first_name}}</title>
+    </head>
+    <body>
+
+        <h3>{{member.full_name}}</h3>
+
+        <i>Famile bank: {{member.family.bank}}</i>
+
+        <br>
+
+        <i>Personal bank: {{member.bank}}</i>
+
+        <br>
+
+        <form action="", method="POST", id="send">
+            {% csrf_token %}
+            <input name="amount" type="number" id="amount"/>
+            <input type="submit" value="send">
+        </form>
+
+        <select name="type" form="send">
+	        <option value="charge">charge</option>
+	        <option value="withdraw">withdraw</option>
+        </select>
+
+    </body>
+</html>

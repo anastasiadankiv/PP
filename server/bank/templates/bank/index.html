@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Families</title>
+    </head>
+
+    <body>
+
+        <h1>Families</h1>
+
+        {% for family in contex %}
+            <p><a href='family/{{ family.id }}'>{{ family }}</a></p>
+        {% endfor %}
+    </body>
+</html>
